@@ -17,10 +17,10 @@ const Sidebar = ({ user }: SiderbarProps) => {
             src="/icons/logo.svg"
             width={34}
             height={34}
-            alt="MHANI BANK"
+            alt="MANI BANK"
             className="size-[24px] max-xl:size-14"
           />
-          <h1 className="sidebar-logo">eMHANI BANK</h1>
+          <h1 className="sidebar-logo">eMANI BANK</h1>
         </Link>
 
         {sidebarLinks.map((item) => {
