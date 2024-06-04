@@ -2,6 +2,7 @@ import { formatAmount } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Copy from './Copy'
 
 const BankCard = ({ account, userName, showBalance = true }: CreditCardProps) => {
 
@@ -28,8 +29,8 @@ const BankCard = ({ account, userName, showBalance = true }: CreditCardProps) =>
               ●● / ●●
               </h2>
             </div>
-            <p className='tex-14 font-semibold tracking-[1.1px' text-white>
-             ●●●● ●●●● ●●●● <span className='text'>1234</span>
+            <p className="text-14 font-semibold tracking-[1.1px] text-white">
+              ●●●● ●●●● ●●●● <span className="text-16">{account?.mask}</span>
             </p>
           </article>
         </div>
@@ -59,7 +60,7 @@ const BankCard = ({ account, userName, showBalance = true }: CreditCardProps) =>
         />
       </Link>
 
-      {/* {showBalance && <Copy title={account?.sharaebleId} />} */}
+      {showBalance && <Copy title={account?.sharaebleId} />}
     </div>
   )
 }
